@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
               drawerToggleButton(),
               Column(
                 children: [
-                  headerText("Quiz App"),
+                  headerText("Đố Vui"),
                   const SizedBox(height: 30),
                   ...homeScreenButtons(context),
                 ],
@@ -63,37 +63,37 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  "Quiz App",
+                  "Trò Chơi Đố Vui",
                   style: TextStyle(color: Colors.white, fontSize: 32),
                 ),
                 Text(
-                  "Version: 1.00",
+                  "Phiên bản: 1.00",
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ],
             ),
           ),
           ListTile(
-            title: const Text('Home'),
+            title: const Text('Trang chủ'),
             onTap: () {
               Navigator.pushReplacementNamed(context, HomeScreen.routeName);
             },
           ),
           ListTile(
-            title: const Text('Start Quiz'),
+            title: const Text('Bắt đầu chơi'),
             onTap: () async {
               var quiz = await _quizStore.getRandomQuizAsync();
               Navigator.pushNamed(context, "/quiz", arguments: quiz);
             },
           ),
           ListTile(
-            title: const Text('Quiz Category'),
+            title: const Text('Danh mục câu đố'),
             onTap: () {
               Navigator.pushNamed(context, QuizCategoryScreen.routeName);
             },
           ),
           ListTile(
-            title: const Text('Quiz History'),
+            title: const Text('Lịch sử chơi'),
             onTap: () {
               Navigator.pushNamed(context, QuizHistoryScreen.routeName);
             },
@@ -102,14 +102,14 @@ class _HomeScreenState extends State<HomeScreen> {
             thickness: 2,
           ),
           ListTile(
-            title: const Text('About'),
+            title: const Text('Giới thiệu'),
             onTap: () {
               AlertUtil.showAlert(
-                  context, "About us", "More at https://fluttertutorial.net");
+                  context, "About us", "More at ...");
             },
           ),
           ListTile(
-            title: const Text('Exit'),
+            title: const Text('Thoát'),
             onTap: () {
               if (Platform.isAndroid) {
                 SystemNavigator.pop();
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.pushNamed(context, QuizScreen.routeName, arguments: quiz);
         },
         child: const Text(
-          "Start Quiz",
+          "Bắt đầu chơi",
           style: TextStyle(fontSize: 35, color: Colors.white),
         ),
         isActive: true,
@@ -173,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.pushNamed(context, QuizCategoryScreen.routeName);
         },
         child: Text(
-          "Quiz Category",
+          "Danh mục",
           style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
         ),
       ),
@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.pushNamed(context, QuizHistoryScreen.routeName);
         },
         child: Text(
-          "Quiz History",
+          "Lịch sử chơi",
           style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
         ),
       ),

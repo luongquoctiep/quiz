@@ -41,7 +41,7 @@ class _QuizHistoryScreenState extends State<QuizHistoryScreen> {
           decoration: ThemeHelper.fullScreenBgBoxDecoration(),
           child: Column(
             children: [
-              const ScreenHeader("Quiz History"),
+              const ScreenHeader("Lịch sử chơi"),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
@@ -88,12 +88,12 @@ class _QuizHistoryScreenState extends State<QuizHistoryScreen> {
                       quiz.quizTitle.isEmpty ? "Question" : quiz.quizTitle,
                       style: const TextStyle(fontSize: 24),
                     ),
-                    Text("Score: ${quiz.score}",
+                    Text("Điểm: ${quiz.score}",
                         style: TextStyle(
                             color: ThemeHelper.accentColor, fontSize: 18)),
-                    Text("Time Taken: ${quiz.timeTaken}"),
+                    Text("Thời gian hoàn thành: ${quiz.timeTaken}"),
                     Text(
-                        "Date: ${quiz.quizDate.year}-${quiz.quizDate.month}-${quiz.quizDate.day} ${quiz.quizDate.hour}:${quiz.quizDate.minute}"),
+                        "Ngày: ${quiz.quizDate.year}-${quiz.quizDate.month}-${quiz.quizDate.day} ${quiz.quizDate.hour}:${quiz.quizDate.minute}"),
                   ]),
             ),
             Column(
@@ -113,7 +113,7 @@ class _QuizHistoryScreenState extends State<QuizHistoryScreen> {
                             arguments: value);
                       });
                     },
-                    child: const Text("Start Again")),
+                    child: const Text("Chơi lại")),
               ],
             )
           ],

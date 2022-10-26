@@ -163,7 +163,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
             ),
           ),
           Text(
-            "$_remainingTime Seconds",
+            "$_remainingTime Giây",
             style: const TextStyle(fontSize: 16),
           ),
         ],
@@ -186,7 +186,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
             Navigator.pop(context);
           },
           child: const Text(
-            "Cancel",
+            "Hủy bỏ",
             style: TextStyle(fontSize: 20),
           ),
           width: 130,
@@ -197,7 +197,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
             engine.next();
           },
           child: const Text(
-            "Next",
+            "Tiếp theo",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           isActive: true,

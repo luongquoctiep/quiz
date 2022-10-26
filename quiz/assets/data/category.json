@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Science",
+    "name": "Khoa Học",
     "imagePath": "assets/icons/category/science.png"
   },
   {
     "id": 2,
-    "name": "Music",
+    "name": "Âm Nhạc",
     "imagePath": "assets/icons/category/music.png"
   },
   {
     "id": 3,
-    "name": "Sports",
+    "name": "Thể Thao",
     "imagePath": "assets/icons/category/sports.png"
   },
   {
     "id": 4,
-    "name": "Nature",
+    "name": "Tự Nhiên",
     "imagePath": "assets/icons/category/nature.png"
   },
   {
     "id": 5,
-    "name": "English",
+    "name": "Tiếng Anh",
     "imagePath": "assets/icons/category/language.png"
   },
   {
     "id": 6,
-    "name": "Mathematics",
+    "name": "Toán",
     "imagePath": "assets/icons/category/math.png"
   },
   {
     "id": 7,
-    "name": "Science",
+    "name": "Xã Hội",
     "imagePath": "assets/icons/category/science.png"
   },
   {
     "id": 8,
-    "name": "Music",
+    "name": "Điện Ảnh",
     "imagePath": "assets/icons/category/music.png"
   }
 ]

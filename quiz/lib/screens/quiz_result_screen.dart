@@ -59,7 +59,7 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
               Navigator.pop(context);
             },
             child: const Text(
-              "Close",
+              "Quay lại",
               style: TextStyle(color: Colors.deepPurple, fontSize: 20),
             ),
             width: 150,
@@ -71,7 +71,7 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
                   context, QuizHistoryScreen.routeName);
             },
             child: const Text(
-              "History",
+              "Lịch sử",
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
             width: 150,
@@ -90,15 +90,15 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
           image: AssetImage("assets/images/quizResultBadge.png"),
         ),
         Text(
-          "Congratulations!",
+          "Xin chúc mừng!",
           style: Theme.of(context).textTheme.headline3,
         ),
         Text(
-          "You have completed the quiz",
+          "Bạn đã hoàn thành trò chơi câu đố",
           style: Theme.of(context).textTheme.headline5,
         ),
         Text(
-          "Your Score",
+          "Số điểm",
           style: Theme.of(context).textTheme.headline4,
         ),
         Text(

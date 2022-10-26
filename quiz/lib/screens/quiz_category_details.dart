@@ -71,7 +71,7 @@ class _QuizCategoryDetailsScreenState extends State<QuizCategoryDetailsScreen> {
             },
           ),
           Text(
-            "${category.name} Quiz",
+            "Câu Đố ${category.name}",
             style: Theme.of(context).textTheme.headline4,
           ),
         ],
@@ -107,7 +107,7 @@ class _QuizCategoryDetailsScreenState extends State<QuizCategoryDetailsScreen> {
               bottomLeft: Radius.circular(15),
             )),
         child: Text(
-          "${quiz.questions.length} Questions",
+          "${quiz.questions.length} Câu hỏi",
           style: const TextStyle(color: Colors.white),
         ),
       ),

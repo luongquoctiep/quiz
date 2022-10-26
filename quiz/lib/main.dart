@@ -165,16 +165,16 @@ class _QuizAppState extends State<QuizApp> {
       );
     }
 
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('IAP Example'),
-        ),
-        body: Stack(
-          children: stack,
-        ),
-      ),
-    );
+    // return MaterialApp(
+    //   home: Scaffold(
+    //     appBar: AppBar(
+    //       title: const Text('IAP Example'),
+    //     ),
+    //     body: Stack(
+    //       children: stack,
+    //     ),
+    //   ),
+    // );
 
     return MaterialApp(
       title: 'Flutter Quiz App',

@@ -67,7 +67,7 @@ class _QuizCategoryScreenState extends State<QuizCategoryScreen> {
             },
           ),
           Text(
-            "Quiz Categories",
+            "Danh Mục Câu Đố",
             style: Theme.of(context).textTheme.headline4,
           ),
         ],
