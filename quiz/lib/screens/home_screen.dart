@@ -86,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
             title: const Text('Bắt đầu chơi'),
             onTap: () async {
               var quiz = await _quizStore.getRandomQuizAsync();
+              if (!mounted) return;
               Navigator.pushNamed(context, "/quiz", arguments: quiz);
             },
           ),
@@ -107,8 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ListTile(
             title: const Text('Giới thiệu'),
             onTap: () {
-              AlertUtil.showAlert(
-                  context, "About us", "More at ...");
+              AlertUtil.showAlert(context, "About us", "More at ...");
             },
           ),
           ListTile(
@@ -165,13 +165,15 @@ class _HomeScreenState extends State<HomeScreen> {
           DiscoButton(
             onPressed: () async {
               var quiz = await _quizStore.getRandomQuizAsync();
-              Navigator.pushNamed(context, QuizScreen.routeName, arguments: quiz);
+              if (!mounted) return;
+              Navigator.pushNamed(context, QuizScreen.routeName,
+                  arguments: quiz);
             },
+            isActive: true,
             child: const Text(
               "Bắt đầu chơi",
               style: TextStyle(fontSize: 35, color: Colors.white),
             ),
-            isActive: true,
           ),
           DiscoButton(
             onPressed: () {
@@ -202,7 +204,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-
     ];
   }
 }

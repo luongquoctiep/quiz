@@ -1,14 +1,6 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
-import 'package:in_app_purchase_android/billing_client_wrappers.dart';
-import 'package:in_app_purchase_android/in_app_purchase_android.dart';
-
 import 'common/route_generator.dart';
 import 'common/theme_helper.dart';
-import 'consumable_store.dart';
 import 'stores/quiz_store.dart';
 
 void main() async {
@@ -25,7 +17,6 @@ class QuizApp extends StatefulWidget {
 }
 
 class _QuizAppState extends State<QuizApp> {
-
   @override
   void initState() {
     super.initState();

@@ -58,25 +58,25 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
             onPressed: () {
               Navigator.pop(context);
             },
+            width: 150,
+            height: 50,
             child: const Text(
               "Quay lại",
               style: TextStyle(color: Colors.deepPurple, fontSize: 20),
             ),
-            width: 150,
-            height: 50,
           ),
           DiscoButton(
             onPressed: () {
               Navigator.pushReplacementNamed(
                   context, QuizHistoryScreen.routeName);
             },
+            width: 150,
+            height: 50,
+            isActive: true,
             child: const Text(
               "Lịch sử",
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
-            width: 150,
-            height: 50,
-            isActive: true,
           ),
         ],
       ),

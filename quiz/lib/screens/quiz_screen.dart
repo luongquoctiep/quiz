@@ -185,24 +185,24 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
             });
             Navigator.pop(context);
           },
+          width: 130,
+          height: 50,
           child: const Text(
             "Hủy bỏ",
             style: TextStyle(fontSize: 20),
           ),
-          width: 130,
-          height: 50,
         ),
         DiscoButton(
           onPressed: () {
             engine.next();
           },
+          isActive: true,
+          width: 130,
+          height: 50,
           child: const Text(
             "Tiếp theo",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
-          isActive: true,
-          width: 130,
-          height: 50,
         ),
       ],
     );
