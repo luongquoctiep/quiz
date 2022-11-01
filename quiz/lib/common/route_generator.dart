@@ -7,6 +7,7 @@ import '../screens/home_screen.dart';
 import '../screens/quiz_category.dart';
 import '../screens/quiz_category_details.dart';
 import '../screens/quiz_history_screen.dart';
+import '../screens/quiz_purchase_screen.dart';
 import '../screens/quiz_result_screen.dart';
 import '../screens/quiz_screen.dart';
 import '../screens/splash_screen.dart';
@@ -37,6 +38,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const QuizCategoryScreen());
       case QuizHistoryScreen.routeName:
         return MaterialPageRoute(builder: (_) => const QuizHistoryScreen());
+      case QuizPurchaseScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const QuizPurchaseScreen());
       case QuizCategoryDetailsScreen.routeName:
         if (args is Category) {
           return MaterialPageRoute(

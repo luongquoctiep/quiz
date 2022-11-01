@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz/screens/quiz_purchase_screen.dart';
 
 import '../common/alert_util.dart';
 import '../common/theme_helper.dart';
@@ -30,20 +31,22 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         key: _key,
         drawer: navigationDrawer(),
-        body: Container(
-          alignment: Alignment.center,
-          decoration: ThemeHelper.fullScreenBgBoxDecoration(),
-          child: Column(
-            children: [
-              drawerToggleButton(),
-              Column(
-                children: [
-                  headerText("Đố Vui"),
-                  const SizedBox(height: 30),
-                  ...homeScreenButtons(context),
-                ],
-              ),
-            ],
+        body: SingleChildScrollView(
+          child: Container(
+            alignment: Alignment.center,
+            decoration: ThemeHelper.fullScreenBgBoxDecoration(),
+            child: Column(
+              children: [
+                drawerToggleButton(),
+                Column(
+                  children: [
+                    headerText("Đố Vui"),
+                    const SizedBox(height: 30),
+                    ...homeScreenButtons(context),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -157,35 +160,49 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> homeScreenButtons(BuildContext context) {
     return [
-      DiscoButton(
-        onPressed: () async {
-          var quiz = await _quizStore.getRandomQuizAsync();
-          Navigator.pushNamed(context, QuizScreen.routeName, arguments: quiz);
-        },
-        child: const Text(
-          "Bắt đầu chơi",
-          style: TextStyle(fontSize: 35, color: Colors.white),
-        ),
-        isActive: true,
+      Column(
+        children: [
+          DiscoButton(
+            onPressed: () async {
+              var quiz = await _quizStore.getRandomQuizAsync();
+              Navigator.pushNamed(context, QuizScreen.routeName, arguments: quiz);
+            },
+            child: const Text(
+              "Bắt đầu chơi",
+              style: TextStyle(fontSize: 35, color: Colors.white),
+            ),
+            isActive: true,
+          ),
+          DiscoButton(
+            onPressed: () {
+              Navigator.pushNamed(context, QuizCategoryScreen.routeName);
+            },
+            child: Text(
+              "Danh mục",
+              style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
+            ),
+          ),
+          DiscoButton(
+            onPressed: () {
+              Navigator.pushNamed(context, QuizHistoryScreen.routeName);
+            },
+            child: Text(
+              "Lịch sử chơi",
+              style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
+            ),
+          ),
+          DiscoButton(
+            onPressed: () {
+              Navigator.pushNamed(context, QuizPurchaseScreen.routeName);
+            },
+            child: Text(
+              "Mua lượt chơi",
+              style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
+            ),
+          ),
+        ],
       ),
-      DiscoButton(
-        onPressed: () {
-          Navigator.pushNamed(context, QuizCategoryScreen.routeName);
-        },
-        child: Text(
-          "Danh mục",
-          style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
-        ),
-      ),
-      DiscoButton(
-        onPressed: () {
-          Navigator.pushNamed(context, QuizHistoryScreen.routeName);
-        },
-        child: Text(
-          "Lịch sử chơi",
-          style: TextStyle(fontSize: 30, color: ThemeHelper.primaryColor),
-        ),
-      ),
+
     ];
   }
 }
